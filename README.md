@@ -1,4 +1,4 @@
-# 🎮 Cyborg Gaming Platform
+# 🎮 Syborg Gaming Platform
 
 A modern, responsive gaming platform built with React and Vite, featuring a sleek dark theme and smooth animations.
 
@@ -8,7 +8,7 @@ A modern, responsive gaming platform built with React and Vite, featuring a slee
 
 - **🎮 Game Discovery**: Browse popular games and featured content
 - **📚 Personal Library**: Track your gaming library with play time statistics
-- **🎥 Live Streams**: Watch live gaming streams from popular streamers
+- **🎥 Live Streams**: Watch live gaming streams from popular streamers like IShowSpeed, Ilyass Malky, xQc, and more
 - **🔍 Search Functionality**: Find games and content easily
 - **📱 Fully Responsive**: Optimized for desktop, tablet, and mobile devices
 - **🎨 Modern UI**: Dark theme with pink accent colors and smooth animations
@@ -25,8 +25,8 @@ A modern, responsive gaming platform built with React and Vite, featuring a slee
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/skouza101/syborg-game.git
-cd syborg-game
+git clone https://github.com/skouza101/syborgame.git
+cd syborgame
 ```
 
 2. Install dependencies:
@@ -53,11 +53,6 @@ npm run build
 npm run preview
 ```
 
-### Deploy to GitHub Pages
-```bash
-npm run deploy
-```
-
 ## 🧩 Project Structure
 
 ```
@@ -77,7 +72,7 @@ src/
 - **Home** (`/`) - Main dashboard with popular games and library
 - **Browse** (`/browse`) - Explore featured games and top downloads
 - **Details** (`/details`) - Detailed game information and screenshots
-- **Streams** (`/streams`) - Live streaming content and streamers
+- **Streams** (`/streams`) - Live streaming content and popular streamers
 
 ## 📱 Responsive Design
 
@@ -102,23 +97,22 @@ The platform is fully responsive with breakpoints for:
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
 - `npm run lint` - Run ESLint for code quality
-- `npm run deploy` - Deploy to GitHub Pages
 
 ## 🎮 Sample Data
 
 The platform includes sample data for:
-- **Popular Games**: Fortnite, PUBG, CS-GO, Minecraft, and more
+- **Popular Games**: Baldur's Gate 3, Cyberpunk 2077, Call of Duty, and more
 - **Gaming Library**: Personal games with play statistics
 - **Featured Games**: Highlighted game recommendations
-- **Live Streamers**: Sample streaming content and creators
+- **Live Streamers**: IShowSpeed, Ilyass Malky, xQc, Kai Cenat, Ninja, Pokimane, Ludwig, Shroud
 
 ## 🚀 Recent Improvements
 
-- ✅ Fixed all PropTypes validation errors
-- ✅ Made fully responsive for all device sizes
-- ✅ Enhanced UI with hover effects and animations
-- ✅ Improved accessibility with proper alt text
-- ✅ Better component structure and organization
+- ✅ Enhanced streaming section with popular streamers
+- ✅ Improved responsive design for mobile devices
+- ✅ Added dynamic random ratings and download counts
+- ✅ Simplified card components for better performance
+- ✅ Updated streamer data with real profile pictures
 - ✅ Modern React patterns with hooks
 - ✅ Comprehensive documentation
 
@@ -138,14 +132,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Design inspiration from TemplateMo Cyborg Gaming template
 - Icons from React Icons library
-- Images from the original template assets
+- Streamer images and content
 
 ## 📞 Support
 
 If you have any questions or need help, please open an issue on GitHub.
 
 ---
-
-**Live Demo**: [https://skouza101.github.io/syborg-game](https://skouza101.github.io/syborg-game)
 
 **Made with ❤️ for gamers by gamers**
