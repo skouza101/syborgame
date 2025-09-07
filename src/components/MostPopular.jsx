@@ -1,37 +1,70 @@
 import Data from "../public/Data";
 import { FaStar, FaDownload } from "react-icons/fa";
+
 const MostPopular = () => {
+  const generateRandomRating = () => (Math.random() * 2 + 3).toFixed(1);
+  const generateRandomDownloads = () => {
+    const num = Math.random() * 8 + 1;
+    return num >= 1 ? `${num.toFixed(1)}M` : `${(num * 1000).toFixed(0)}K`;
+  };
+
   return (
-    <section className="w-full bg-zinc-900 flex flex-col px-16 py-10 rounded-2xl gap-10 relative">
-      <h1 className="text-4xl font-extrabold text-pink-500">
-        <span className="text-zinc-300 underline">Most Popular</span> Right Now
-      </h1>
-      <div className="flex flex-wrap gap-x-6 gap-y-5">
+    <section className="card-base">
+      <div className="flex items-center gap-3 justify-center sm:justify-start mb-8">
+        <div className="w-1 h-8 bg-gradient-to-b from-pink-500 to-purple-600 rounded-full"></div>
+        <h1 className="text-heading-2">
+          <span className="text-zinc-300">Most Popular</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 ml-2">
+            Right Now
+          </span>
+        </h1>
+      </div>
+      
+      <div className="grid-responsive mb-8">
         {Data.map((game, index) => (
-          <>
-            <div className="flex grow flex-col basis-42 py-4 bg-zinc-800 rounded-2xl px-3 justify-center gap-6 " key={index}>
-              <img src={game.img} className="flex bg-blue-800 h-40 w-full rounded-2xl" />
-              <div className="flex justify-between ">
-                <div className="flex flex-col">
-                  <h1 className="text-zinc-100 font-semibold text-lg">{game.name}</h1>
-                  <h3 className="text-zinc-500">{game.desc}</h3>
-                </div>
-                <div className="flex flex-col text-right text-zinc-300">
-                  <span className="flex items-center gap-1 text-right text-zinc-100 font-medium">
-                    <FaStar className=" text-yellow-500" />
-                    4.8
-                  </span>
-                  <span className="flex items-center gap-1 text-zinc-100 font-medium">
-                    <FaDownload className=" text-pink-500" />
-                    2.3M
-                  </span>
-                </div>
+          <div 
+            key={index}
+            className="flex flex-col gap-4 p-4 bg-zinc-700 rounded-2xl hover:bg-zinc-600 transition-all duration-300 transform hover:scale-105 cursor-pointer group border border-zinc-600"
+          >
+            <div className="relative overflow-hidden rounded-xl">
+              <img 
+                src={game.img} 
+                alt={game.name}
+                className="w-full h-32 sm:h-36 md:h-40 object-cover rounded-xl group-hover:scale-110 transition-transform duration-300" 
+              />
+              <div className="absolute inset-0 gradient-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+            
+            <div className="flex justify-between items-start gap-2">
+              <div className="flex flex-col flex-1 min-w-0">
+                <h1 className="text-white font-semibold text-body-medium group-hover:text-pink-500 transition-colors duration-300 truncate">
+                  {game.name}
+                </h1>
+                <h3 className="text-body-small text-zinc-400 truncate mt-1">
+                  {game.desc}
+                </h3>
+              </div>
+              
+              <div className="flex flex-col text-right flex-shrink-0 gap-1">
+                <span className="flex items-center gap-1 text-white font-medium text-body-small">
+                  <FaStar className="text-yellow-500" />
+                  {generateRandomRating()}
+                </span>
+                <span className="flex items-center gap-1 text-white font-medium text-body-small">
+                  <FaDownload className="text-pink-500" />
+                  {generateRandomDownloads()}
+                </span>
               </div>
             </div>
-          </>
+          </div>
         ))}
       </div>
-      <button className="absolute -bottom-7 right-2/4 translate-x-1/2 rounded-3xl bg-pink-500 text-zinc-300 font-medium py-3 px-8">Discover Popular</button>
+      
+      <div className="flex justify-center">
+        <button className="btn-primary">
+          Discover Popular
+        </button>
+      </div>
     </section>
   );
 };

@@ -2,12 +2,18 @@ import Card from "../Card";
 
 const StarLive = () => {
   return (
-    <section className="flex flex-col relative py-20 gap-y-16">
-      <h1 className="md:text-4xl text-3xl grow font-extrabold text-pink-500 flex-wrap  justify-center flex gap-2">
-        <span className="text-zinc-300 underline ">How To Start Your</span>
-        Live Stream
-      </h1>
-      <div className="flex gap-4 flex-wrap">
+    <section className="card-base">
+      <div className="flex items-center gap-3 justify-center sm:justify-start mb-8">
+        <div className="w-1 h-8 bg-gradient-to-b from-pink-500 to-purple-600 rounded-full"></div>
+        <h1 className="text-heading-2">
+          <span className="text-zinc-300">How To Start Your</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 ml-2">
+            Live Stream
+          </span>
+        </h1>
+      </div>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         <Card
           url="https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/service-01.jpg"
           heading="Go To Your Profile"
@@ -24,9 +30,12 @@ const StarLive = () => {
           heading="You Are Live"
         />
       </div>
-      <button className="absolute -bottom-0 right-2/4 translate-x-1/2 rounded-3xl bg-pink-500 text-zinc-300 font-medium py-3 px-8">
-        Discover Popular
-      </button>
+      
+      <div className="flex justify-center">
+        <button className="btn-primary">
+          Start Streaming
+        </button>
+      </div>
     </section>
   );
 };

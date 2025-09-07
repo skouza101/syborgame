@@ -2,22 +2,22 @@ import { FaServer, FaGamepad, FaStar, FaDownload } from "react-icons/fa6";
 
 const FortniteInfo = () => {
   return (
-    <section className="grow basis-1/2 bg-zinc-800 py-10 rounded-2xl flex justify-evenly text-zinc-100">
-      <div className="grid gap-y-2">
+    <section className="grow basis-1/2 bg-zinc-800 p-6 rounded-2xl flex justify-evenly text-white border border-zinc-700">
+      <div className="grid gap-2 text-center">
         <FaStar className="text-yellow-500 mx-auto text-xl" />
-        <p>4.8</p>
+        <p className="text-body-medium">4.8</p>
       </div>
-      <div className="grid gap-y-2">
+      <div className="grid gap-2 text-center">
         <FaDownload className="text-pink-500 mx-auto text-xl" />
-        <p>2.3M</p>
+        <p className="text-body-medium">2.3M</p>
       </div>
-      <div className="grid gap-y-2">
+      <div className="grid gap-2 text-center">
         <FaServer className="text-pink-500 mx-auto text-xl" />
-        <p>36 GB</p>
+        <p className="text-body-medium">36 GB</p>
       </div>
-      <div className="grid gap-y-2">
+      <div className="grid gap-2 text-center">
         <FaGamepad className="text-pink-500 mx-auto text-xl" />
-        <p>Action</p>
+        <p className="text-body-medium">Action</p>
       </div>
     </section>
   );

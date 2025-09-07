@@ -1,21 +1,17 @@
 import Footer from "./components/Footer"
-import GameLebrary from "./components/GameLebrary"
+import GameLibrary from "./components/GameLibrary"
 import Header from "./components/Header"
 import MostPopular from "./components/MostPopular"
 import Welcome from "./components/Welcome"
-
+import Layout from "./components/Container";
 
 const App = () => {
   return (
-    <>
-    <Header />
-    <div className="flex flex-col gap-14 bg-zinc-800 w-full rounded-2xl p-16">
+    <Layout>
       <Welcome />
       <MostPopular />
-      <GameLebrary />
-    </div>
-    <Footer />
-    </>
+      <GameLibrary />
+    </Layout>
   )
 }
 

@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom";
+
 const Head = () => {
   return (
-    <section className="flex justify-between flex-wrap gap-6">
+    <section className="flex-responsive justify-between responsive-gap">
       <img
         src="https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/feature-left.jpg"
-        className="grow mx-auto md:w-5/12 h-80 rounded-2xl"
+        alt="Game Feature"
+        className="grow mx-auto md:w-5/12 h-80 rounded-2xl border border-zinc-600 object-cover"
       />
       <Link
-        strict
         to="https://www.youtube.com/watch?v=r1b03uKWk_M"
-        className="grow mx-auto md:w-6/12 h-60 md:h-80 rounded-2xl"
+        className="grow mx-auto md:w-6/12 h-60 md:h-80 rounded-2xl hover:scale-105 transition-transform duration-300"
       >
         <img
           src="https://templatemo.com/templates/templatemo_579_cyborg_gaming/assets/images/feature-right.jpg"
-          className="w-full h-full rounded-2xl"
+          alt="Game Trailer"
+          className="w-full h-full rounded-2xl border border-zinc-600 object-cover"
         />
       </Link>
     </section>
